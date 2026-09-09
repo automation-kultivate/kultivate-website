@@ -1373,3 +1373,120 @@ main{
     border-radius:24px;
   }
 }
+/* Contact section */
+.contact-section {
+  padding-top: clamp(5.5rem, 10vw, 9rem);
+}
+
+.contact-card {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2.1rem, 6vw, 4.8rem);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(2, 245, 240, 0.19), transparent 34%),
+    radial-gradient(circle at 90% 16%, rgba(224, 65, 156, 0.17), transparent 32%),
+    rgba(255, 255, 255, 0.78);
+}
+
+.contact-card::before,
+.contact-card::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+  filter: blur(0.2px);
+}
+
+.contact-card::before {
+  width: 220px;
+  height: 220px;
+  right: 9%;
+  top: 12%;
+  background: rgba(2, 245, 240, 0.13);
+}
+
+.contact-card::after {
+  width: 150px;
+  height: 150px;
+  left: 8%;
+  bottom: 10%;
+  background: rgba(224, 65, 156, 0.12);
+}
+
+.contact-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-card h2 {
+  margin: 0;
+  max-width: 760px;
+  color: var(--text);
+  font-size: clamp(2.4rem, 6.8vw, 5.8rem);
+  line-height: 0.96;
+  letter-spacing: -0.06em;
+  font-weight: 760;
+}
+
+.contact-copy {
+  max-width: 780px;
+  margin-top: 1.35rem;
+  color: var(--text);
+  font-size: clamp(1.04rem, 2vw, 1.22rem);
+  line-height: 1.64;
+  font-weight: 480;
+}
+
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.25rem;
+  margin-top: 2rem;
+  padding: 0 1.35rem;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--text);
+  box-shadow: 0 18px 38px rgba(28, 38, 41, 0.14);
+  font-weight: 760;
+  letter-spacing: -0.02em;
+  transition: transform 0.22s ease, background-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.contact-button:hover,
+.contact-button:focus-visible {
+  transform: translateY(-2px);
+  background: var(--magenta);
+  box-shadow: 0 20px 44px rgba(224, 65, 156, 0.18);
+}
+
+.contact-alternative {
+  margin-top: 1.35rem;
+  color: rgba(28, 38, 41, 0.7);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.contact-alternative a {
+  color: var(--text);
+  font-weight: 760;
+  border-bottom: 1px solid rgba(28, 38, 41, 0.34);
+}
+
+.contact-alternative a:hover,
+.contact-alternative a:focus-visible {
+  color: var(--magenta);
+  border-bottom-color: var(--magenta);
+}
+
+@media (max-width: 720px) {
+  .contact-card {
+    padding: 2rem 1.35rem;
+    border-radius: 24px;
+  }
+
+  .contact-button {
+    width: 100%;
+    margin-top: 1.6rem;
+  }
+}
