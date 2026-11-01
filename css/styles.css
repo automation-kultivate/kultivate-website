@@ -1490,3 +1490,19 @@ main{
     margin-top: 1.6rem;
   }
 }
+
+/* Hero slogan: 3 lines, smaller typography */
+.hero-tagline {
+  font-size: clamp(1.35rem, 2.2vw, 2rem);
+  line-height: 1.25;
+}
+
+.hero-tagline span {
+  display: block;
+}
+
+@media (max-width: 860px) {
+  .hero-tagline {
+    font-size: clamp(1.15rem, 4.5vw, 1.7rem);
+  }
+}
